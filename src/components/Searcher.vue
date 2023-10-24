@@ -1,11 +1,28 @@
 <template>
   <div class="search-container">
-    <input type="search" placeholder="Buscar producto" />
+    <input 
+      type="search"
+      placeholder="Buscar producto"
+      v-model="search"
+      @input="$emit('update:modelValue', search)"
+    />
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref , defineProps,defineEmits} from "vue";
+
+const props = defineProps({
+  modelValue: {
+    type: String,
+    required: true,
+  },
+});
+
+const emit = defineEmits(["update:modelValue"]);
+
+const search = ref("");
+
 </script>
 
 <style>

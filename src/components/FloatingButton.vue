@@ -5,7 +5,7 @@
       bottom: bottom,
       right: bottom,
     }"
-    class="bg-white text-blue-500 p-2 rounded-md"
+    :class="'over bg-white text-blue-500 p-2 rounded-md'"
   >
     <span ref="icon" class="icon-number">{{ number }}</span>
     <media src="/assets/sounds/coin.mp3" />
@@ -46,6 +46,10 @@ watch(
 </script>
 
 <style scoped>
+.over{
+  position: fixed;
+  z-index: 11;
+}
 .icon-resalte {
   animation: resalte 1s ease-in-out;
   transform: scale(1.5) rotate(360deg);

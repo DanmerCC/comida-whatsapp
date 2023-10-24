@@ -44,7 +44,7 @@ export default {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 9999;
+  z-index: 1;
 }
 
 .modal {
@@ -53,7 +53,7 @@ export default {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 99999;
+  z-index: 1;
 }
 
 .modal-close {

@@ -40,11 +40,12 @@ const totalItems = computed(() => {
 });
 
 const showCart = ref(false);
+const search = ref("");
 </script>
 
 <template>
   <div class="container">
-    <Searcher />
+    <Searcher v-model="search" />
     <ProductList @select="productSelected = $event" />
 
     <transition name="modal-fade" appear>
