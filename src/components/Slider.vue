@@ -9,11 +9,19 @@
 </template>
 
 <script setup>
-import { ref, defineEmits } from "vue";
+import { ref, watch } from "vue";
 
-const { slides } = defineProps(["slides"]);
+const { slides,slideIndex } = defineProps({
+  slides: {
+    type: Array,
+    required: true,
+  },
+  slideIndex: {
+    type: Number,
+    default: 0,
+  },
+});
 const emit = defineEmits(["update:slideIndex"]);
-const slideIndex = ref(0);
 
 const previousSlide = () => {
   if (slideIndex.value > 0) {
@@ -31,6 +39,7 @@ const nextSlide = () => {
 
 const backIcon = "<";
 const nextIcon = ">";
+
 </script>
 <style scoped>
 

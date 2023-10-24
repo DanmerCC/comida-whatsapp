@@ -7,6 +7,7 @@ import ModalTwo from "./components/ModalTwo.vue";
 import ProductDetails from "./components/ProductDetails.vue";
 import ResumeOrder from "./components/ResumeOrder.vue";
 import BtnAdd from "./components/BtnAdd.vue";
+import BtnWhatsapp from "./components/BtnWhatsapp.vue";
 import { computed, ref } from "vue";
 const productSelected = ref(null);
 const cart = ref({});
@@ -60,6 +61,7 @@ const search = ref("");
             <BtnAdd 
               @click="addToCart(productSelected, subitem)"
             ></BtnAdd>
+            <BtnWhatsapp @click="productSelected=null; showCart = true"/>
           </ProductDetails>
         </template>
       </ModalTwo>

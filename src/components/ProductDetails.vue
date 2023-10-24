@@ -8,7 +8,7 @@
     <p>Elije una entrada</p>
     <Slider :slides="otherOptions" v-model:slideIndex="currentSlideIndex">
       <template #default="{ slide }">
-        <div class="slide-item">{{ slide }}</div>
+        <div class="slide-item" @click="navigate()" >{{ slide }}</div>
       </template>
     </Slider>
     <slot :subitem="otherOptions[currentSlideIndex]"></slot>
@@ -28,9 +28,16 @@ const props = defineProps({
 });
 const currentSlideIndex = ref(0);
 const otherOptions = computed(() => {
-  const options = ["sopa", "arroz", "frijoles", "carne"];
+  const options = ["sopa de casa", "ensalada fresca", "solterito", "ceviche"];
   return options;
 });
+
+const navigate = () => {
+  currentSlideIndex.value++;
+  if (currentSlideIndex.value >= otherOptions.value.length) {
+    currentSlideIndex.value = 0;
+  }
+};
 </script>
 <style scoped>
 img {
@@ -49,6 +56,7 @@ img {
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   min-width: fit-content;
+  cursor: pointer;
 }
 </style>
 <style scoped>

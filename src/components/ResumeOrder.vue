@@ -38,14 +38,13 @@
       </tfoot>
     </table>
     <!--whatsapp pedido-->
-    <div class="btn-whatsapp" @click="sendCartRequest(cart)">
-      <i class="dcc-whatsapp"></i>
-    </div>
+    <BtnWhatsapp :size="4" @click="sendCartRequest(cart)"/>
   </div>
 </template>
 <script setup>
 import { defineProps, defineEmits, computed, ref } from "vue";
 import config from "../config";
+import BtnWhatsapp from "./BtnWhatsapp.vue";
 
 const emit = defineEmits(["add", "remove"]);
 
@@ -101,21 +100,6 @@ table {
 
 tr {
   border-bottom: 1px solid #ccc;
-}
-.btn-whatsapp {
-  bottom: 1rem;
-  right: 1rem;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: #25d366;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 100;
 }
 .btn-add {
   font-size: 1.5rem;
