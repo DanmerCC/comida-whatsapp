@@ -58,10 +58,19 @@ const search = ref("");
             :product="productSelected"
             #default="{ subitem }"
           >
-            <BtnAdd 
-              @click="addToCart(productSelected, subitem)"
-            ></BtnAdd>
-            <BtnWhatsapp @click="productSelected=null; showCart = true"/>
+          <div class="options-container">
+            <div class="with-80">
+<BtnAdd 
+                @click="addToCart(productSelected, subitem)"
+              ></BtnAdd>
+            </div>
+            <div class="with-20">
+              <BtnAdd @click="productSelected=null;showCart=true">
+                Terminar de pedir
+              </BtnAdd>
+            </div>
+          </div>
+            
           </ProductDetails>
         </template>
       </ModalTwo>
@@ -103,5 +112,31 @@ const search = ref("");
 .modal-fade-enter-active,
 .modal-fade-leave-active {
   transition: all 2s transform ease-in-out;
+}
+
+.options-container
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+
+}
+
+.with-80
+{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.with-20
+{
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 </style>

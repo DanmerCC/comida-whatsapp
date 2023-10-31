@@ -39,6 +39,10 @@
     </table>
     <!--whatsapp pedido-->
     <BtnWhatsapp :size="4" @click="sendCartRequest(cart)"/>
+    <BtnAdd @click="sendCartRequest(cart)">
+      Terminar de pedir
+    </BtnAdd>
+
   </div>
 </template>
 <script setup>
@@ -138,6 +142,7 @@ tr {
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   margin: 0.5rem;
+  
 }
 
 .container table {
