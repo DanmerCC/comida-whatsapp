@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "Arroz chaufa de pollo",
+        "description": "Arroz frito al estilo chino con pollo, vegetales mixtos y sazonado con salsa de soya.\"",
+        "image": "\/assets\/images\/7jAAT3QvvotngsUiCrhHZ3ajinAfNlGVaXhZzbA1.jpg",
+        "price": "10.00"
+    },
+    {
+        "id": 2,
+        "name": "Arroz chaufa de carne",
+        "description": "Arroz salteado con carne de res, huevos y vegetales, con un sazonado tradicional a base de salsa de soya.",
+        "image": "\/assets\/images\/22d176yw7CYAfKXOUxCsUTpQEZ8J7YlPdk1qGpE5.jpg",
+        "price": "15.00"
+    },
+    {
+        "id": 3,
+        "name": "Arrz chaufa de chancho",
+        "description": "Plato de arroz frito con cerdo, combinado con huevos, vegetales y una mezcla sabrosa de salsa de soya.",
+        "image": "\/assets\/images\/wFGzkCL2CryKcs1ktkhwpR1NSkwCavXrqzmOR0u6.jpg",
+        "price": "15.00"
+    },
+    {
+        "id": 4,
+        "name": "Aerepuerto",
+        "description": "Una variante del arroz chaufa, abundante en ingredientes",
+        "image": "\/assets\/images\/rrj0G4TEgFKYbpT6T26PZoCg2U7hPlvukt9TWP7c.jpg",
+        "price": "11.00"
+    },
+    {
+        "id": 5,
+        "name": "Lomo a lo Pobre",
+        "description": "Carne de res salteada con cebolla y tomate, acompa\u00f1ada de arroz blanco, patatas fritas y un huevo frito encima.",
+        "image": "\/assets\/images\/ss8cagGAEsvtwivsNQVJc9DdUzMNQDaptY8HJdQ9.jpg",
+        "price": "25.00"
+    },
+    {
+        "id": 6,
+        "name": "Pollo al durazno",
+        "description": "Pollo dulce en salsa de tamarindo verduras y durazno",
+        "image": "\/assets\/images\/Lb1oQTJfON5jxwGNUdCdTcPcd7DUZ180ALKSwPjd.jpg",
+        "price": "18.00"
+    },
+    {
+        "id": 7,
+        "name": "Chijaukay",
+        "description": "Pollo emapnizad en sala de ostion",
+        "image": "\/assets\/images\/r1D9jZ1pQmsK5Ptc4x4L6SJRdF3w5auTB5vPJqj7.jpg",
+        "price": "13.00"
+    }
+]

@@ -1,4 +1,5 @@
-
+const NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER;
+console.log(NUMBER)
 export default {
     currency: {
         prefix: 'S./'
@@ -13,7 +14,7 @@ export default {
     },
     whatsapp: {
         url: 'https://api.whatsapp.com/send',
-        phone: '51955745111',
+        phone: NUMBER,
         text: 'Hola, quiero pedir'
     },
 } 

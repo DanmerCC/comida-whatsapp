@@ -3,7 +3,7 @@
     class="product-details bg-blue-500 text-white p-4"
     @click.prevent.stop="$emit('click')"
   >
-    <img :src="product.image" />
+    <img :src="baseurl + product.image" />
     <p class="text-xl">{{ formatCurrency(product.price) }}</p>
     <p>Elije una entrada</p>
     <Slider :slides="otherOptions" v-model:slideIndex="currentSlideIndex">
@@ -16,9 +16,11 @@
 </template>
 
 <script setup>
+const baseurl = ref(import.meta.env.VITE_BASE_URL?.toString() || "");
 import Slider from "./Slider.vue";
 import { computed, ref } from "vue";
 import config from "../config";
+import entries from "../../entries.json";
 const formatCurrency = ref(config.formatCurrency);
 const props = defineProps({
   product: {
@@ -28,7 +30,7 @@ const props = defineProps({
 });
 const currentSlideIndex = ref(0);
 const otherOptions = computed(() => {
-  const options = ["sopa de casa", "ensalada fresca", "solterito", "ceviche"];
+  const options = Object.keys(entries)
   return options;
 });
 

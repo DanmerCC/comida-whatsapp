@@ -8,7 +8,7 @@ import ProductDetails from "./components/ProductDetails.vue";
 import ResumeOrder from "./components/ResumeOrder.vue";
 import BtnAdd from "./components/BtnAdd.vue";
 import BtnWhatsapp from "./components/BtnWhatsapp.vue";
-import { computed, ref } from "vue";
+import { computed, ref,onMounted } from "vue";
 const productSelected = ref(null);
 const cart = ref({});
 const addToCart = (product, extra = "null") => {
@@ -42,6 +42,12 @@ const totalItems = computed(() => {
 
 const showCart = ref(false);
 const search = ref("");
+
+onMounted(() => {
+  console.log("mounted");
+  console.log("BASE_URL",import.meta.env.VITE_BASE_URL?.toString() || "");
+  console.log("WHATSAPP_NUMBER",import.meta.env.VITE_WHATSAPP_NUMBER?.toString() || "");
+});
 </script>
 
 <template>

@@ -1,6 +1,7 @@
 <script setup>
 import config from "../config";
 import { ref } from "vue";
+const baseurl = ref(import.meta.env.VITE_BASE_URL?.toString() || "");
 const formatCurrency = ref(config.formatCurrency);
 const props = defineProps({
   product: {
@@ -13,7 +14,7 @@ const props = defineProps({
 <template>
   <div class="product bg-blue-500 text-white p-5" @click="$emit('click')">
     <p class="text-xl text-center">{{ product.name }}</p>
-    <img :src="product.image" />
+    <img :src="baseurl + product.image" />
     <p class="text-xl">{{ formatCurrency(product.price) }}</p>
     <p class="text-xl">{{ product.description }}</p>
     <!--add button-->
